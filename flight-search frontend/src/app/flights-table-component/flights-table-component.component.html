@@ -1,0 +1,24 @@
+<table class="table table-boardered">
+    <thead>
+      <tr>
+        <th scope="col">Departure</th>
+        <th scope="col">Arrival</th>
+        <th scope="col" style="width: 100%;">Date</th>
+        <th scope="col">Stopovers</th>
+        <th scope="col">Passengers</th>
+        <th scope="col">Price</th>
+        <th scope="col">Currency</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let row of flightsObject">
+            <td>{{row.departure}}</td>
+            <td>{{row.arrival}}</td>
+            <td style="width: 100px;">{{row.departureDate}}</td>
+            <td>{{row.numberOfStopovers}}</td>
+            <td>{{row.passengersCount}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.currency}}</td>
+        </tr>
+    </tbody>
+  </table>

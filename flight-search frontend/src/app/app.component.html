@@ -1,0 +1,33 @@
+<h1 class="display-4" style="text-align: center;">Search flight prices</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col" style="font-size: 18px; font-weight: bold;">
+          <br>
+          <label>Departure:</label>
+          <input [(ngModel)]="departure" type="text" class="form-control" style="width: 180px;">
+          <br>
+          <label>Arrival:</label>
+          <input [(ngModel)]="arrival" type="text" class="form-control" style="width: 180px;">
+          <br>
+          <label>Departure date:</label>
+          <input [(ngModel)]="departureDate" type="text" class="form-control" style="width: 180px;">
+          <br>
+          <label>Seats:</label>
+          <input [(ngModel)]="adultSeats" type="text" class="form-control" style="width: 180px;">
+          <br>
+          <label>Currency:</label>
+          <input [(ngModel)]="currencyCode" type="text" class="form-control" style="width: 180px;">
+          <br>
+          <button type="button" class="btn btn-dark" (click)="submit()">Search</button>          
+      </div>
+      <div class="col">
+          <br>
+        <app-flights-table-component [flightObjects]="flights"></app-flights-table-component>
+      </div>
+      <div class="col">
+        <br>
+      </div>
+    </div>
+  </div>
